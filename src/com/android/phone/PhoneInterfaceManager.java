@@ -1031,7 +1031,9 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
     }
 
     public boolean isRadioOnForSubscriber(long subId) {
-        return getPhone(subId).getServiceState().getState() != ServiceState.STATE_POWER_OFF;
+        //return getPhone(subId).getServiceState().getState() != ServiceState.STATE_POWER_OFF;
+	return getPhone(subId).getServiceState().getState() != ServiceState.STATE_POWER_OFF
+	&& getPhone(subId).getServiceState().getState() != ServiceState.STATE_OUT_OF_SERVICE;
     }
 
     public void toggleRadioOnOff() {
