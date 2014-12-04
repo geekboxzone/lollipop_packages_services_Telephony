@@ -2038,4 +2038,36 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
 
         return returnValue;
     }
+
+    /**
+     * Return true if the SIM is busy:switching on/off, import or export
+     */
+    public boolean isSimBusy(int subId) {
+        // TODO implement it
+        return false;
+    }
+
+    /**
+     * Return the current SIM activity
+     */
+    public int getSimActivity(int subId) {
+        // TODO implement it
+        return 0;
+    }
+
+    /**
+     * request to start a SIM activity
+     */
+    public int requestSimActivity(int subId, int activity, IBinder binder) {
+        // TODO implement it
+        return 0;
+    }
+
+    /**
+     * request to finish a SIM activity
+     */
+    public int stopSimActivity(int subId, int activity) {
+        // TODO implement it
+        return 0;
+    }
 }
